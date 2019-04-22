@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Photo from './components/Photo';
 import './App.css';
 
 class App extends Component {
   render() {
+    const imageData = {
+      src: "https://wallpapercave.com/wp/wp2506797.jpg",
+      user: {
+        name: "Profile Name",
+        profile_image: "https://profile.actionsprout.com/default.jpeg",
+        link: "https://www.instagram.com"
+      }
+    };
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Photo {...imageData}/>
       </div>
     );
   }
